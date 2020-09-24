@@ -1,0 +1,15 @@
+﻿<h2>Premium</h2>
+@{
+    ViewBag.Title = "Premium";
+}
+
+@Html.DropDownList("Occupation", new List<SelectListItem>()
+{ 
+    new SelectListItem {Text = "ABC", Value = "1"},
+    new SelectListItem {Text = "ABC", Value = "2"},
+    new SelectListItem {Text = "ABC", Value = "3"}
+},"Select Occupation")
+
+@model.Id
+
+<input type="button" value="Create" onclick="location.href='@Url.Action("get", "api/occupation")'" />
